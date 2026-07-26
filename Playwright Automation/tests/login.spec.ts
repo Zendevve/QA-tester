@@ -19,4 +19,6 @@ test('Valid user can log in successfully', async ({ page }) => {
   await inventoryPage.addBackpackToCart();
   await cartPage.verifyCartBadge('1');
   
+  await cartPage.openCart();
+  await cartPage.verifyProductInCart('Sauce Labs Backpack');
 });
